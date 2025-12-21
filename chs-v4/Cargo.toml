@@ -1,0 +1,8 @@
+[package]
+name = "chs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+argh = "0.1.13"
+thiserror = "2.0.17"
