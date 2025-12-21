@@ -1,0 +1,6 @@
+[package]
+name = "chsc"
+version = {workspace = true}
+edition = "2024"
+
+default-run = "chsc"

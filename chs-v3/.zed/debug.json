@@ -1,0 +1,19 @@
+// Project-local debug tasks
+//
+// For more documentation on how to configure debug tasks,
+// see: https://zed.dev/docs/debugger
+[
+  {
+    "label": "Debug chsc",
+    "build": {
+      "command": "cargo",
+      "args": ["build", "--release"]
+    },
+    "program": "$ZED_WORKTREE_ROOT/target/release/chsc",
+    "args": ["c", "$ZED_WORKTREE_ROOT/temp/temp.chs"],
+    // sourceLanguages is required for CodeLLDB (not GDB) when using Rust
+    "sourceLanguages": ["rust"],
+    "request": "launch",
+    "adapter": "CodeLLDB"
+  }
+]

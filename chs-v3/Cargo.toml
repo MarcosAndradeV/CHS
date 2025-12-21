@@ -1,0 +1,16 @@
+[workspace]
+members = [
+    "chsc",
+    "test_maker",
+]
+resolver = "2"
+
+package.version = "0.1.0"
+
+[profile.release]
+debug = true
+opt-level = "z"
+
+[profile.dev]
+debug = true
+# opt-level = "z"
