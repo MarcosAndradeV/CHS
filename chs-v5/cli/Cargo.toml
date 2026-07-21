@@ -1,0 +1,12 @@
+[package]
+name = "cli"
+version = "0.1.0"
+edition = "2024"
+default-run = "chs"
+
+[[bin]]
+name = "chs"
+path = "src/main.rs"
+
+[dependencies]
+compiler = { version = "0.1.0", path = "../compiler" }

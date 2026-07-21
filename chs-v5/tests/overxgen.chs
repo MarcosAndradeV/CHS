@@ -1,0 +1,20 @@
+
+struct List[$T] {
+    items: *$T = null,
+    count: int = 0,
+    capacity: int = 0,
+}
+
+fn append[$T](xs: *List$[$T], x: $T) {
+
+}
+
+fn append[$T](xs: *List$[$T], x: []$T) {
+
+}
+
+fn main() {
+    var xs = List$[int].{};
+    append(&xs, 1);
+    append(&xs, [1, 2, 3]);
+}

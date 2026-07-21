@@ -1,0 +1,13 @@
+[package]
+name = "compiler"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+development = []
+
+[dependencies]
+lex-just-parse = { version = "1.0.0", features = ["interning"] }
+
+[lib]
+crate-type = ["lib", "cdylib"]

@@ -1,0 +1,9 @@
+import "io"
+
+#run {
+    puts("Hello from compile-time (#run)!");
+}
+
+fn main() {
+    puts("Hello from runtime!");
+}

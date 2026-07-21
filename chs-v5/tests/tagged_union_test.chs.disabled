@@ -1,0 +1,79 @@
+import "io"
+
+enum Shape {
+    Circle(int),
+    Rectangle(int, int),
+    Point
+}
+
+enum Option[T] {
+    None,
+    Some(T)
+}
+
+enum Vehicle {
+    Car { doors: int, speed: int },
+    Bike
+}
+
+fn print_shape(s: Shape) {
+    switch s {
+        Shape.Circle(r) -> {
+            printf("Circle with radius: %d\n", r);
+        };
+        Shape.Rectangle(w, h) -> {
+            printf("Rectangle with width: %d and height: %d\n", w, h);
+        };
+        Shape.Point -> {
+            puts("Point");
+        };
+    };
+}
+
+fn print_option(opt: Option[int]) {
+    switch opt {
+        Option.[int].Some(val) -> {
+            printf("Some(%d)\n", val);
+        };
+        Option.[int].None -> {
+            puts("None");
+        };
+    };
+}
+
+fn print_vehicle(v: Vehicle) {
+    switch v {
+        Vehicle.Car(doors, speed) -> {
+            printf("Car with doors: %d and speed: %d\n", doors, speed);
+        };
+        Vehicle.Bike -> {
+            puts("Bike");
+        };
+    };
+}
+
+fn main() {
+    puts("=== Testing Tagged Unions & Pattern Matching ===");
+
+    var c = Shape.Circle(42);
+    var r = Shape.Rectangle(10, 20);
+    var p = Shape.Point;
+
+    print_shape(c);
+    print_shape(r);
+    print_shape(p);
+
+    puts("--- Testing Generic ADTs ---");
+    var opt_some = Option.[int].Some(123);
+    var opt_none = Option.[int].None;
+
+    print_option(opt_some);
+    print_option(opt_none);
+
+    puts("--- Testing Struct Payload ADTs ---");
+    var car = Vehicle.Car(4, 150);
+    var bike = Vehicle.Bike;
+
+    print_vehicle(car);
+    print_vehicle(bike);
+}
