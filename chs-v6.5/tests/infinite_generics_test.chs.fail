@@ -1,0 +1,11 @@
+type Box struct [$T] {
+    val: $T,
+}
+
+fn recurse[$T](x: $T) {
+    recurse[Box[$T]](Box[$T].{ val: x });
+}
+
+fn main() {
+    recurse[int](42);
+}

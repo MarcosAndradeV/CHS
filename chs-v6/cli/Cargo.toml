@@ -1,0 +1,14 @@
+[package]
+name = "cli"
+version.workspace = true
+authors.workspace = true
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.6.2", features = ["derive"] }
+compiler = { path = "../compiler" }
+diagnostic = { path = "../diagnostic" }
+
+[[bin]]
+name = "chs"
+path = "src/main.rs"

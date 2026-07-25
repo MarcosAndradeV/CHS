@@ -1,0 +1,6 @@
+import "io"
+
+fn main() {
+    var a = [1, 2, 3];
+    print("%\n", #anycast[a[4]]); // <- Should not compile
+}

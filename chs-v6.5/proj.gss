@@ -1,0 +1,6 @@
+config = {
+    scripts = {
+        build = "cargo build",
+        test  = "./runtest.sh",
+    }
+}

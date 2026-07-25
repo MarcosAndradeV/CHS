@@ -1,0 +1,5 @@
+import "helper/private_helper"
+
+fn main() {
+    private_func(); // Should fail compile because private_func is private to helper/private_helper
+}

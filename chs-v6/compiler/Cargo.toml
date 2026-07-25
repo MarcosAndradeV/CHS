@@ -1,0 +1,16 @@
+[package]
+name = "compiler"
+version = "0.1.0"
+edition = "2024"
+build = "build.rs"
+
+[features]
+development = []
+
+[dependencies]
+diagnostic = { path = "../diagnostic" }
+syntax = { path = "../syntax" }
+semantics = { path = "../semantics" }
+codegen = { path = "../codegen" }
+types = { path = "../types" }
+ir = { path = "../ir" }

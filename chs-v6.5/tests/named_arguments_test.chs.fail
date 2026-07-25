@@ -1,0 +1,9 @@
+import "io"
+
+fn print_info(id: int, name: string = "Guest", active: bool = false) {
+    print("id: %, name: %, active: %\n", #anycast[id, name, active]);
+}
+
+fn main() {
+    print_info(100, invalid_param: "Alice"); // Should fail compile because invalid_param is not a parameter
+}
